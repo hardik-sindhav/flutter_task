@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task/pages/landing_page.dart';
 import 'package:flutter_task/pages/splash_screen.dart';
 
 void main() {
@@ -18,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LandingPage(),
+      home: SplashPage(),
     );
   }
 }
