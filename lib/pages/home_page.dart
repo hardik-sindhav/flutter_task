@@ -1,16 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_task/const/assets.dart';
 import 'package:flutter_task/const/colors.dart';
-import 'package:flutter_task/const/fonts_size.dart';
-import 'package:flutter_task/const/size.dart';
-import 'package:flutter_task/const/text.dart';
-import 'package:flutter_task/helper/responsive_sizer.dart';
 import 'package:flutter_task/pages/product_action_page.dart';
 import 'package:flutter_task/pages/product_page.dart';
-import 'package:flutter_task/utils/textstyle_utils.dart';
-import 'package:flutter_task/widgets/search_textfield.dart';
 import 'package:iconly/iconly.dart';
 
 class HomePage extends StatefulWidget {
