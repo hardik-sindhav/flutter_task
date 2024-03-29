@@ -26,14 +26,20 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    _currentIndex = widget.index??0;
+    _currentIndex = widget.index ?? 0;
     super.initState();
   }
 
   List pages = [
-    ProductPage(),
-    Container(),
-    ProductActionPage()
+    const ProductPage(),
+    const Center(
+      child: Text(
+        "Cart Page",
+        style: TextStyle(
+            fontSize: 22, fontWeight: FontWeight.w600, fontFamily: 'Poppins'),
+      ),
+    ),
+    const ProductActionPage()
   ];
 
   @override
@@ -46,10 +52,9 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         backgroundColor: AppColors.whiteColor,
         body: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          child: pages[_currentIndex]
-        ),
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: pages[_currentIndex]),
         bottomNavigationBar: SizedBox(
           height: 60,
           child: BottomNavigationBar(
@@ -57,16 +62,18 @@ class _HomePageState extends State<HomePage> {
               elevation: 0,
               backgroundColor: AppColors.whiteColor,
               type: BottomNavigationBarType.fixed,
-              fixedColor: CupertinoColors.systemPurple,
+              fixedColor: AppColors.greenColor,
               onTap: (value) {
                 setState(() {
                   _currentIndex = value;
                 });
               },
               items: const [
-                BottomNavigationBarItem(icon: Icon(IconlyLight.category), label: ''),
+                BottomNavigationBarItem(
+                    icon: Icon(IconlyLight.category), label: ''),
                 BottomNavigationBarItem(icon: Icon(IconlyLight.buy), label: ''),
-                BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), label: ''),
+                BottomNavigationBarItem(
+                    icon: Icon(CupertinoIcons.person), label: ''),
               ]),
         ),
       ),

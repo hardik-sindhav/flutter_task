@@ -47,7 +47,7 @@ class _ProductActionPageState extends State<ProductActionPage> {
         body: isLoading
             ? const ProgressWidget()
             : productList.isEmpty
-                ? const Text("No data found")
+                ? Center(child: Text("No data found",style: AppTextStyle().poppinsSemiBold(context: context),))
                 : Padding(
                     padding: Responsive.paddingOnly(context, SizeClass.size14,
                         SizeClass.size14, SizeClass.size40, 0),

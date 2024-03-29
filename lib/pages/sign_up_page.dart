@@ -62,6 +62,7 @@ class _SignUpPageState extends State<SignUpPage> {
           : SingleChildScrollView(
               physics: const ClampingScrollPhysics(),
               child: Container(
+                padding: Responsive.horizontalPadding(context, SizeClass.size20),
                 alignment: Alignment.center,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -97,6 +98,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       height: 50,
                     ),
                     ButtonWidget(
+                      margin: 0,
                       text: TextClass.signUpText,
                       textColor: AppColors.whiteColor,
                       buttonColor: AppColors.greenColor,
@@ -123,7 +125,7 @@ class _SignUpPageState extends State<SignUpPage> {
           context: context,
           message: 'Enter valid password. Password length gather than 6.');
     } else if (mobileController.text.isEmpty ||
-        passwordController.text.length < 9) {
+        mobileController.text.length < 9) {
       SnackBarClass().showErrorMessage(
           context: context, message: 'Enter valid mobile number.');
     } else {
